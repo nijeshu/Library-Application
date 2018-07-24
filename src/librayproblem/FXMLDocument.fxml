@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librayproblem.FXMLDocumentController">
+  <tabs>
+    <Tab text="Holding item/s">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="name" layoutX="187.0" layoutY="32.0" prefHeight="26.0" prefWidth="346.0" />
+                  <TextField fx:id="callnumber" layoutX="187.0" layoutY="69.0" prefHeight="26.0" prefWidth="345.0" />
+                  <Button layoutX="424.0" layoutY="116.0" mnemonicParsing="false" onAction="#addHold" prefHeight="26.0" prefWidth="108.0" text="ADD Hold" />
+                  <Label layoutX="90.0" layoutY="29.0" prefHeight="32.0" prefWidth="95.0" text="Name:" />
+                  <Label layoutX="90.0" layoutY="74.0" prefHeight="16.0" prefWidth="96.0" text="Call Number:" />
+                  <Button layoutX="423.0" layoutY="158.0" mnemonicParsing="false" onAction="#terminateHold" text="Terminate Hold" />
+                  <TextArea fx:id="outputpaneFirst" layoutX="22.0" layoutY="232.0" prefHeight="115.0" prefWidth="555.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Checking-in items">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="293.0" layoutY="104.0" mnemonicParsing="false" onAction="#checkin" text="Check-in" />
+                  <Label layoutX="62.0" layoutY="62.0" prefHeight="29.0" prefWidth="106.0" text="Call Number:" />
+                  <TextField fx:id="checkincallnumber" layoutX="206.0" layoutY="63.0" prefHeight="26.0" prefWidth="332.0" />
+                  <TextArea fx:id="outputpane" layoutX="16.0" layoutY="153.0" prefHeight="200.0" prefWidth="569.0" />
+                  <Button layoutX="408.0" layoutY="104.0" mnemonicParsing="false" onAction="#deleteOldestHold" text="Delete Oldest Hold" />
+                  <Label layoutX="16.0" layoutY="130.0" text="Hold information:" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
